@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Auto Loan Intake Form
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+A very small app that allows the user to fill out an auto loan application. Exists for the purpose of playing around with a couple concepts and tools.
 
 ## Available Scripts
 
