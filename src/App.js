@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import AutoDetails from './components/AutoDetails'
+import LoanApplicationResults from "./components/LoanApplicationResults"
+import './styles/index.scss';
+import { Provider } from 'react-redux'
+import store from './store'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <header className="App-header">
+          <h1 className='App-title'>Auto loan pre-approval</h1>
+        </header>
+        <Router>
+          <Switch>
+            <Route path="/approval-form-results">
+              <LoanApplicationResults />
+            </Route>
+            <Route path="/">
+              <AutoDetails />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    </Provider>
   );
 }
 

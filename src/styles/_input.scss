@@ -1,0 +1,19 @@
+.form-input {
+    margin-bottom: 1.5em;
+    text-align: left;
+    label {
+        display: block;
+        margin: 0.8em 0;
+        font-weight: bold;
+        color: #222;
+    }
+    input {
+        width: 100%;
+        font-size: 1.3em;
+    }
+    .form-input-error > span {
+        display: block;
+        margin: 0 0 0.3em 0;
+        color: red;
+    }
+}
